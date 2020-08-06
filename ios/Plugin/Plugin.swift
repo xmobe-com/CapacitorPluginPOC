@@ -20,13 +20,14 @@ public class LoginPlugin: CAPPlugin {
             /// We only can delegate the full native UI Flow embed to here when plugin the same source code.
 //            UIApplication.shared.windows.first!.rootViewController = UINavigationController(rootViewController: controller!)
             
-            /// When we using plugin as an embed full native from a repository.
-            /// We can not set the root View. We only access to get propery self.bridge.viewController (can only: push, present, dismiss)
+//             When we using plugin as an embed full native from a repository. We can not set the root View. We only access to get propery self.bridge.viewController (can only: push, present, dismiss)
             self.bridge.viewController.present(rootNavigationController, animated: true, completion: nil)
             controller?.cancelHandler = {
-                call.success([
-                    "value": value
-                ])
+                self.bridge.viewController.dismiss(animated: true) {
+                    call.success([
+                        "value": value
+                    ])
+                }
             }
             
         }
