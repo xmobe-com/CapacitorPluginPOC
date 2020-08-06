@@ -34,20 +34,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAE-0l-CDG">
+                                <rect key="frame" x="135" y="483" width="105" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back To Web"/>
+                                <connections>
+                                    <action selector="button2:" destination="LiF-Ei-RpJ" eventType="touchUpInside" id="xmZ-jR-8zg"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMp-Nc-Scq">
-                                <rect key="frame" x="114" y="431" width="105" height="30"/>
+                                <rect key="frame" x="135" y="430" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Push To View 2"/>
                                 <connections>
                                     <segue destination="RcI-ah-IOS" kind="push" id="bsJ-gX-ar5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAE-0l-CDG">
-                                <rect key="frame" x="139" y="484" width="55" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Dismiss"/>
-                                <connections>
-                                    <action selector="button2:" destination="LiF-Ei-RpJ" eventType="touchUpInside" id="xmZ-jR-8zg"/>
                                 </connections>
                             </button>
                         </subviews>

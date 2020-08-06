@@ -21,6 +21,11 @@ public class LoginPlugin: CAPPlugin {
 //            UIApplication.shared.windows.first!.rootViewController = UINavigationController(rootViewController: controller!)
             
 //             When we using plugin as an embed full native from a repository. We can not set the root View. We only access to get propery self.bridge.viewController (can only: push, present, dismiss)
+            if self.bridge == nil {
+                /// Prevent crash due to unit test don't have this bridge.
+                return
+            }
+            
             self.bridge.viewController.present(rootNavigationController, animated: true, completion: nil)
             controller?.cancelHandler = {
                 self.bridge.viewController.dismiss(animated: true) {
