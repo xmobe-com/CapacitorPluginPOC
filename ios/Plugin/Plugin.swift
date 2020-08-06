@@ -9,6 +9,10 @@ import Capacitor
 public class LoginPlugin: CAPPlugin {
     
     @objc func showLogin(_ call: CAPPluginCall) {
+        #if DEBUG
+        print("Javascript -> invoke Native API")
+        #endif
+        
         let value = call.getString("value") ?? ""
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         DispatchQueue.main.async {
