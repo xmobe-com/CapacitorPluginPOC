@@ -8,12 +8,11 @@ import Capacitor
 @objc(LoginPlugin)
 public class LoginPlugin: CAPPlugin {
     @objc func showLogin(_ call: CAPPluginCall) {
-        print("Javascript -> invoke Native API")
-        
         let value = call.getString("value") ?? ""
+        print("JS invoke Native with value = \(value)")
+
         let bundle = Bundle(for: Self.classForCoder())
         let storyboard = UIStoryboard(name: "Login", bundle: bundle)
-        print(storyboard)
         DispatchQueue.main.async {
             let controller = storyboard.instantiateViewController(withIdentifier: "CustomViewController") as? CustomViewController
             let rootNavigationController = UINavigationController(rootViewController: controller!)
@@ -29,12 +28,16 @@ public class LoginPlugin: CAPPlugin {
             self.bridge.viewController.present(rootNavigationController, animated: true, completion: nil)
             controller?.cancelHandler = {
                 self.bridge.viewController.dismiss(animated: true) {
+                    call.error("User cancelled the Login Flow.")
+                }
+            }
+            controller?.completeHandler = { token in
+                self.bridge.viewController.dismiss(animated: true) {
                     call.success([
-                        "value": value
+                        "JWT-TOKEN was simulated": token
                     ])
                 }
             }
-            
         }
     }
 }

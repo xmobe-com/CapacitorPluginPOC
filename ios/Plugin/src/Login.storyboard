@@ -18,7 +18,7 @@
         <!--Input Email to receive OTP-->
         <scene sceneID="ONn-96-M0O">
             <objects>
-                <viewController storyboardIdentifier="CustomViewController" title="Input Email to receive OTP" id="LiF-Ei-RpJ" customClass="CustomViewController" customModule="Plugin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomViewController" title="Input Email to receive OTP" id="LiF-Ei-RpJ" customClass="CustomViewController" customModule="CapacitorLoginFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Njr-i7-0Rc"/>
                         <viewControllerLayoutGuide type="bottom" id="0Le-Ca-g26"/>
@@ -34,17 +34,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMp-Nc-Scq">
-                                <rect key="frame" x="135" y="376" width="105" height="30"/>
-                                <state key="normal" title="Push To View 2"/>
+                                <rect key="frame" x="126.5" y="376" width="122" height="30"/>
+                                <state key="normal" title="Simulate Get OTP"/>
                                 <connections>
-                                    <segue destination="RcI-ah-IOS" kind="push" id="bsJ-gX-ar5"/>
+                                    <action selector="getOTPButtonTapped:" destination="LiF-Ei-RpJ" eventType="touchUpInside" id="oVu-Sh-eX5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAE-0l-CDG">
-                                <rect key="frame" x="135" y="423" width="105" height="30"/>
-                                <state key="normal" title="Back To Web"/>
+                                <rect key="frame" x="126.5" y="423" width="122" height="30"/>
+                                <state key="normal" title="Dismiss"/>
                                 <connections>
-                                    <action selector="button2:" destination="LiF-Ei-RpJ" eventType="touchUpInside" id="xmZ-jR-8zg"/>
+                                    <action selector="dismissButtonTapped:" destination="LiF-Ei-RpJ" eventType="touchUpInside" id="wjp-uc-Lgr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,21 +67,31 @@
         <!--OTP Input-->
         <scene sceneID="a9i-1B-KPO">
             <objects>
-                <viewController storyboardIdentifier="CustomViewController2" title="OTP Input" id="RcI-ah-IOS" customClass="CustomViewController2" customModule="Plugin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomViewController2" title="OTP Input" id="RcI-ah-IOS" customClass="CustomViewController2" customModule="CapacitorLoginFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fkp-aK-M2u"/>
                         <viewControllerLayoutGuide type="bottom" id="8XW-YC-EEo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dqt-xo-9kn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQx-HG-P5f">
+                                <rect key="frame" x="87" y="308" width="201" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Simulate Input valid OTP"/>
+                                <connections>
+                                    <action selector="inputOTPButtonTapped:" destination="RcI-ah-IOS" eventType="touchUpInside" id="ik3-QQ-RvW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="F49-Lx-YWb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAF-wb-hWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="111"/>
+            <point key="canvasLocation" x="1799.2" y="110.19490254872565"/>
         </scene>
     </scenes>
 </document>
