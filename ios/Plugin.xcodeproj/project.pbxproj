@@ -17,7 +17,7 @@
 		50E1A94820377CB70090CE1A /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1A94720377CB70090CE1A /* Plugin.swift */; };
 		D654FDF924DBDF05009A471F /* CustomViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654FDF724DBDF05009A471F /* CustomViewController2.swift */; };
 		D654FDFA24DBDF05009A471F /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654FDF824DBDF05009A471F /* CustomViewController.swift */; };
-		D654FE0924DBF057009A471F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D654FE0824DBF057009A471F /* Main.storyboard */; };
+		D654FE0B24DBF81E009A471F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D654FE0A24DBF81E009A471F /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 		96ED1B6440D6672E406C8D19 /* Pods-PluginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PluginTests/Pods-PluginTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D654FDF724DBDF05009A471F /* CustomViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController2.swift; sourceTree = "<group>"; };
 		D654FDF824DBDF05009A471F /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
-		D654FE0824DBF057009A471F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D654FE0A24DBF81E009A471F /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F65BB2953ECE002E1EF3E424 /* Pods-PluginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PluginTests/Pods-PluginTests.release.xcconfig"; sourceTree = "<group>"; };
 		F6753A823D3815DB436415E3 /* Pods_PluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,7 +140,7 @@
 			children = (
 				D654FDF824DBDF05009A471F /* CustomViewController.swift */,
 				D654FDF724DBDF05009A471F /* CustomViewController2.swift */,
-				D654FE0824DBF057009A471F /* Main.storyboard */,
+				D654FE0A24DBF81E009A471F /* Login.storyboard */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D654FE0924DBF057009A471F /* Main.storyboard in Resources */,
+				D654FE0B24DBF81E009A471F /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +467,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_ASSET_PATHS = Plugin/src/Main.storyboard;
+				DEVELOPMENT_ASSET_PATHS = Plugin/src/Login.storyboard;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -494,7 +494,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_ASSET_PATHS = Plugin/src/Main.storyboard;
+				DEVELOPMENT_ASSET_PATHS = Plugin/src/Login.storyboard;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
