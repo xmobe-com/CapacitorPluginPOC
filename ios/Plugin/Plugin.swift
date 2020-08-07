@@ -16,6 +16,7 @@ public class LoginPlugin: CAPPlugin {
         DispatchQueue.main.async {
             let controller = storyboard.instantiateViewController(withIdentifier: "CustomViewController") as? CustomViewController
             let rootNavigationController = UINavigationController(rootViewController: controller!)
+            rootNavigationController.modalPresentationStyle = .fullScreen
             /// We only can delegate the full native UI Flow embed to here when plugin the same source code.
 //            UIApplication.shared.windows.first!.rootViewController = UINavigationController(rootViewController: controller!)
             
